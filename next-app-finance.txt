@@ -1,0 +1,10 @@
+// Next
+// Shade cn - styling
+// Clerk - authentication
+// logoipsum - logos
+// Hono Web application framework for backend api structure
+// zod validator for backend
+// react-use [media/ismobile]
+// lucide-react
+// Neom Database
+// Drizzle ORM
