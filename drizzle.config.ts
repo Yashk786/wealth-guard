@@ -1,9 +1,14 @@
+import { config } from "dotenv";
 import { defineConfig } from "drizzle-kit";
 
+config({path: '.env.local'});
+
 export default defineConfig({
-  schema: "./src/schema/*",
-  out: "./drizzle",
+  dialect: "postgresql",
+  schema: "./db/schema.ts",
   dbCredentials: {
-    url: 'postgresql://wealth-guard_owner:3RTLG9nXstaK@ep-cold-haze-a5cx8i3h.us-east-2.aws.neon.tech/wealth-guard?sslmode=require',
-  }
+    url: process.env.DB_URL!,
+  },
+  verbose: true,
+  strict: true,
 });
